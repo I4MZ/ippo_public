@@ -1,0 +1,133 @@
+@font-face {
+    font-family: 'HakgyoansimGgooreogiR';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2307-2@1.0/HakgyoansimGgooreogiR.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.textAreaLeft {
+    position: absolute;
+    padding: 10px;
+    font-family: 'HakgyoansimGgooreogiR', sans-serif;
+    font-size: 40px;
+    top: 170px;
+    left: 190px;
+    width: 40%;
+    height: 75%;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+  
+.textAreaRight {
+    position: absolute;
+    padding: 10px;
+    font-family: 'HakgyoansimGgooreogiR', sans-serif;
+    font-size: 40px;
+    top: 170px;
+    right: 190px;
+    width: 40%;
+    height: 75%;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    line-height: 1.6;
+}
+  
+.loadingContainer {
+    max-width: 500px;
+    max-height: 500px;
+    width: 400px; 
+    height: 400px; 
+    border-radius: 250px;
+}
+  
+.chapterImage {
+    max-width: 100%;
+    max-height: 730px;
+}
+  
+.storybookScrollbar {
+    overflow-y: auto;
+    height: 100%;
+}
+  
+.endImage {
+    max-width: 500px;
+    max-height: 500px;
+    width: 400px; 
+    height: 400px; 
+    border-radius: 250px;
+}
+
+.button-class {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: inline-block;
+    transition: all 0.3s ease;
+}
+
+.button-class:hover {
+    background-color: #45a049;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.button-class:active {
+    background-color: #3e8e41;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+    transform: scale(0.98);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.centerContent {
+    text-align: center; /* 텍스트를 가운데 정렬합니다 */
+    display: flex;
+    flex-direction: column; /* 자식 요소들을 세로로 정렬합니다 */
+    align-items: center; /* 수직축으로 가운데 정렬합니다 */
+    justify-content: center; /* 수평축으로 가운데 정렬합니다 */
+}
+
+.input-box {
+    display: flex; /* Flexbox 적용 */
+    align-items: center; /* 세로 중앙 정렬 */
+    /* 나머지 스타일은 유지 */
+  }
+  
+  .tuktak_in {
+    flex-grow: 0; /* 텍스트 필드 크기 고정 */
+    flex-shrink: 0;
+    width: 650px; /* 기존 너비 유지 */
+  }
+
+  .input-box {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    /* 기타 필요한 스타일 */
+  }
+  
+  .input-box > div {
+    display: flex;
+    align-items: center; /* 세로 중앙 정렬 */
+  }
+  
+  .tuktak_in {
+    flex-grow: 0;
+    flex-shrink: 0;
+    width: 650px; /* 너비 고정 */
+    /* 기타 필요한 스타일 */
+  }

@@ -1,0 +1,20 @@
+# FastAPI를 실행하기 위한 기본 이미지
+FROM python:3.10.13
+
+# 작업 디렉토리 설정
+WORKDIR /app
+
+# 필요한 Python 패키지들을 설치하기 위해 requirements.txt 복사
+COPY requirements.txt /app/
+
+# pip 업그레이드
+RUN pip install --no-cache-dir --upgrade pip
+
+# requirements.txt에 명시된 패키지들 설치
+RUN pip install --no-cache-dir --upgrade -r requirements.txt
+
+# 나머지 소스 코드 복사
+COPY ./ /app/
+
+# 기본적으로 실행할 명령어
+CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8001"]

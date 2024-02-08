@@ -1,0 +1,88 @@
+.doduk-main {
+    display: flex; /* Flexbox 레이아웃 사용 */
+    justify-content: center; /* 자식 요소들을 중앙 정렬 */
+    align-items: center; /* 자식 요소들을 세로축 중앙에 배치 */
+    font-family: 'jua', sans-serif;
+}
+
+.doduk-background {
+    position: absolute; /* 절대적인 포지셔닝을 위해 */
+    top: 0; /* 상단 정렬 */
+    left: 0; /* 좌측 정렬 */
+    width: 100%; /* 전체 너비 */
+    height: 100%; /* 전체 높이 */
+    /*z-index: -1; !* 다른 요소들 뒤에 배치 *!*/
+}
+
+
+.doduk-background-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* 이미지가 비율을 유지하면서 영역을 채우도록 */
+}
+
+
+.left-page,
+.right-page {
+    flex: 1; /* 각 페이지가 동등한 공간을 차지하도록 설정 */
+    z-index: 1;
+}
+
+.left-page {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* 자식 요소들 사이의 간격 */
+    align-items: center;
+    margin-top: 170px;
+}
+
+
+img.doduk-popo-img {
+    width: 600px;
+}
+
+.popo-chat-box {
+    font-size: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.right-page {
+    display: flex;
+    flex-direction: column; /* 자식 요소들을 세로로 배치합니다. */
+    align-items: center; /* 세로 정렬을 수행합니다. */
+    justify-content: space-between; /* 자식 요소들 사이에 공간을 균등하게 배분합니다. */
+    margin-top: 250px;
+}
+
+
+.stop-button {
+    width: 80px;
+    position: absolute;
+    top: 0; /* 위쪽에 위치 */
+    right: 0; /* 오른쪽에 위치 */
+}
+
+.choice-btn-box {
+    margin-bottom: 100px;
+}
+
+.choice-btn-box > button {
+    position: relative;    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: transparent;
+}
+
+.choice-word {
+    position:absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    top: 30px;
+    font-size: 50px;
+}
+

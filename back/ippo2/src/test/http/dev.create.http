@@ -1,0 +1,69 @@
+
+### 회원 정보 조회
+GET {{host}}/users/{{userEmail}}
+Accept: application/json
+
+### 회원 정보 추가 (회원 가입)
+POST {{host}}/users
+Content-Type: application/json
+
+{
+  "userEmail": "isakggong@gmail.com",
+  "phoneNum": "010-8411-11111",
+  "authToken": "kdsp12ha123sdfksbasdasddklv",
+  "authDomain": "kakao"
+}
+
+### 회원 이메일로 회원 수정
+PUT {{host}}/users/{{userEmail}}
+Content-Type: application/json
+
+{
+  "phoneNum": "010-8411-11222"
+}
+
+### 회원 이메일로 회원 삭제
+DELETE {{host}}/users/{{userEmail}}
+Accept: application/json
+
+### 회원 이메일에 있는 자녀 정보
+GET {{host}}/users/children/{{userEmail}}
+Accept: application/json
+
+### 회원 이메일에 있는 자녀 추가
+POST {{host}}/users/children/{{userEmail}}
+Content-Type: application/json
+
+{
+  "childName": "혜연",
+  "childBirthDate": "1996-12-16T02:14:05.660Z",
+  "gender": "여자"
+}
+
+### 자녀 정보 조회
+GET {{host}}/children/7
+Accept: application/json
+
+### 자녀 정보 수정
+PUT {{host}}/children/6
+Content-Type: application/json
+
+{
+  "childName": "박리나",
+  "childBirthDate": "1993-07-16T04:03:52.259Z",
+  "gender": "여자"
+}
+
+### 자녀 정보 삭제
+DELETE {{host}}/children/7
+Accept: application/json
+
+### ChatGPT 요청
+GET {{host}}/glim?prompt=안녕하세요
+Accept: application/json
+
+
+### 교훈동화
+### Redis에 조회
+GET {{host}}/book/doduk/getStoryToRedis?bookId=6&storyNum=1
+Content-Type: application/json

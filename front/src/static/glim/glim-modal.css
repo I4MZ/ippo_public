@@ -1,0 +1,29 @@
+.glim-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1001;
+}
+
+.glim-modal-content {
+  width: 1000px;
+  padding: 0px;
+  border-radius: 4px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+}
+
+.chat-box-overlay {
+  position: absolute;
+  background-color: transparent;
+  /* ... override styles for chat-box modal overlay */
+}
+
+.chat-box-content {
+  /* ... override styles for chat-box modal content */
+}

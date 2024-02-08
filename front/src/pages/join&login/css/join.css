@@ -1,0 +1,128 @@
+@font-face {
+    font-family: 'SangSangShinb7';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_three@1.1/SangSangShinb7.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+.join_box {
+    position: relative;
+    height: 100%;
+    font-family: 'SangSangShinb7';
+    font-size: 550%;
+}
+
+.join_background{
+    position: absolute;
+    left: 8%;
+    top: 15%;
+}
+
+.join_input_box{
+    position: absolute;
+    width: 45%;
+    height: 95%;
+    left: 55%;
+    top: 5%;
+}
+
+.join_email_text{
+    margin-bottom: 3%;
+}
+
+.join_email_input{
+    padding-left: 1%;
+    border: 1px solid #999;
+    background-color: transparent;
+    width: 65%;
+    height: 50%;
+    margin-bottom: 5%;
+}
+
+.join_question{
+    position: absolute;
+    left: -15%;
+    font-size: 200%;
+}
+.join_name_text{
+    margin-top: 20%;
+}
+.join_name_input, .join_birth_input{
+    padding-left: 1%;
+    border: 1px solid #999;
+    background-color: transparent;
+    width: 65%;
+    height: 50%;
+}
+
+
+.join_radio{
+    position: absolute;
+    left: 0;
+    top: 76%;
+    padding: 0;
+    width: 80%;
+    /* height: 10%; */
+}
+.join_radio_box{
+    height: 50%;
+}
+.join_radio_text {
+    font-size: 90%;
+    margin-right: 10%;
+    padding-left: 2%;
+}
+
+.join_radio_input{
+    width: 40px;
+    height: 40px;
+}
+[type="radio"] {
+    appearance: none;
+    border: 4px solid black;
+    border-radius: 50%;
+  }
+[type="radio"]:checked {
+    box-shadow: 0 0 0 3px black;
+    border: 4px solid white;
+    background-color: black;
+}
+
+.join_save_button{
+}
+
+.join_save_text{
+    position:absolute;
+    left: 30%;
+    top: 35%;
+    font-size: 90%;
+}
+
+.btn-3d.cyan {
+    
+    position: absolute;
+    width: 30%;
+    height: 8%;
+    left: 16%;
+    top: 87%;
+    background-color: cornflowerblue;
+    font-size: 130%;
+    border: 2px solid black;
+    line-height: 0.5;
+    text-align: center;
+    color: white;
+
+    background-color: #7fccde;
+    box-shadow: 0 0 0 1px #7fccde inset,
+          0 0 0 2px rgba(255,255,255,0.15) inset,
+          0 8px 0 0 rgba(102, 164, 178, .6),
+          0 8px 0 1px rgba(0,0,0,.4),
+          0 8px 8px 1px rgba(0,0,0,0.5);
+  }
+  .btn-3d.cyan:active {
+    
+    box-shadow: 0 0 0 1px #7fccde inset,
+          0 0 0 2px rgba(255,255,255,0.15) inset,
+          0 0 0 1px rgba(0,0,0,0.4);
+  }

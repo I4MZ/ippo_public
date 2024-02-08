@@ -1,0 +1,21 @@
+.popo-info>.popo {
+    margin: 130px 0px 0px 0px;
+}
+
+
+.storybook-image-container {
+    position: absolute;
+    left: 300px;
+}
+
+
+.storybook-centered-text {
+    text-align: center;
+    position: absolute;
+    font-family: "jua";
+    top: 00px;
+    left: 80px;
+    color: #000; /* 텍스트 색상 */
+    font-size: 30px; /* 텍스트 크기 */
+    /* 추가 스타일링 */
+}

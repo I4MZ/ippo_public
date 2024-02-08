@@ -1,0 +1,26 @@
+
+.imageup-container {
+    position: relative;
+    width: 100%; /* 원하는 너비로 조정 */
+    max-width: 100%;
+    height: auto;
+  }
+
+.custom-uploader {
+    width: 100%; /* 원하는 너비 */
+    height: 300px; /* 원하는 높이 */
+    border: 2px dashed #ccc; /* 테두리 스타일 */
+    border-radius: 10px; /* 둥근 모서리 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: white;
+    cursor: pointer;
+  }
+
+  .uploader-content {
+    font-size: 1.8rem; /* 글자 크기 */
+    font-weight: bold; /* 글자 굵기 */
+    font-family: 'Jua', sans-serif;;
+  }

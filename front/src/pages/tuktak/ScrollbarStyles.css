@@ -1,0 +1,19 @@
+.storybookScrollbar::-webkit-scrollbar {
+    width: 12px; /* 스크롤바의 너비 */
+}
+
+.storybookScrollbar::-webkit-scrollbar-track {
+    background: linear-gradient(180deg, #f8ecd1, #f1c0e8); /* 그라데이션 배경 */
+    border-radius: 20px; /* 둥근 모서리 */
+}
+
+.storybookScrollbar::-webkit-scrollbar-thumb {
+    background-color: #b3a1c6; /* 스크롤바 썸(이동 부분)의 색상 */
+    border-radius: 20px; /* 둥근 모서리 */
+    border: 3px solid #f8ecd1; /* 썸 주변의 테두리와 간격 */
+}
+
+.storybookScrollbar {
+    scrollbar-width: thin; /* 파이어폭스를 위한 스크롤바 너비 */
+    scrollbar-color: #b3a1c6 #f8ecd1; /* 파이어폭스를 위한 스크롤바 색상 */
+}

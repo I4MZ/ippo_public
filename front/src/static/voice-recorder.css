@@ -1,0 +1,19 @@
+.voice-btn {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.fairytale-voice-btn {
+    border: none; /* Remove border if any */
+    cursor: pointer; /* Change cursor on hover */
+    opacity: 0.3; /* Initially transparent */
+    transition: opacity 0.3s; /* Smooth transition for opacity */
+}
+
+.fairytale-voice-btn:hover {
+    opacity: 1; /* Full opacity on hover */
+}

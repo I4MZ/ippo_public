@@ -1,0 +1,69 @@
+@font-face {
+  font-family: 'HakgyoansimGgooreogiR';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2307-2@1.0/HakgyoansimGgooreogiR.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.modal-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .modal-content {
+    width: 80%;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    z-index: 1001;
+    float: left;
+
+  }
+  .loading-gif{
+    margin: 0px 20px 20px 20px;
+    float: left;
+    border-radius: 15px;
+
+  }
+
+  .typewriter{
+    width: 80%;
+    margin-left: 5%;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 4px solid #212121;
+    animation: cursor 5s step-start infinite, 
+      text 7s steps(20) alternate infinite;
+    font-family: 'HakgyoansimGgooreogiR'; 
+    float: left;
+    font-size: 80px;
+    line-height: 280%;
+  }
+  
+  @keyframes cursor {
+    0%, 100% { 
+      border-color: #212121; 
+    }
+  }
+  
+  @keyframes text {
+    0% { 
+      width: 0; 
+    }
+    90%{
+      width: 40%;
+    }
+    100% { 
+      width: 40%;
+      animation-delay: 50s;
+      
+    }
+  }

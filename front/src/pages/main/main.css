@@ -1,0 +1,70 @@
+.login-btn, .logout-btn {
+    margin: 28px 45px;
+}
+
+
+.tuktak-thumbnail {
+    margin: 0px 126px;
+}
+
+.glim-thumbnail {
+    margin: 10px 372px;
+}
+
+.doduk-thumbnail-handle {
+    /*border: 5px solid red;*/
+}
+
+/*.doduk-thumbnail-handle:hover {*/
+/*    background-image: url("../../public/doduk_hover_1.gif");*/
+/*    background-size: cover;*/
+/*    background-repeat: no-repeat;*/
+/*}*/
+
+.tuktak-thumbnail-handle {
+    /*border: 5px solid red;*/
+    margin: 0px 126px;
+}
+
+.glim-thumbnail-handle {
+    /*border: 5px solid red;*/
+    margin: 0px 372px;
+}
+
+.ippo-logo {
+    margin: 335px 818px 250px;
+}
+
+.popo-logo {
+    width: 132px;
+    margin: 73px 866px 0px;
+}
+
+.i4mz-btn {
+    margin: 40px 0px 0px 1680px;
+}
+
+.main-menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 350px;
+}
+
+.artbooks-btn {
+    background-image: url("../../../public/buttonartbooks1@2x.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+    width: 150px;
+    height: 150px;
+}
+
+.library-btn {
+    background-image: url("../../../public/buttonlibrary1@2x.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+    width: 150px;
+    height: 150px;
+}

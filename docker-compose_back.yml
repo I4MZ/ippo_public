@@ -1,0 +1,104 @@
+version: '3.8'
+
+services:
+  db:
+    image: postgres:16
+    container_name: ippo-db
+    volumes:
+      - db-data:/var/lib/postgresql/data
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB}
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+    ports:
+      - "5432:5432"
+    networks:
+      - ippo_project
+
+  fastapi_doduk:
+    build:
+      context: ./back/fastapi/doduk
+      dockerfile: Dockerfile_doduk
+    container_name: fastapi-doduk-app
+    ports:
+      - "8001:8001"
+    environment:
+      OPENAI_API_KEY: ${OPENAI_API_KEY}
+      SERVER_ID: ${SERVER_ID}
+      CHANNEL_ID: ${CHANNEL_ID}
+      SALAI_TOKEN: ${SALAI_TOKEN}
+    networks:
+      - ippo_project
+
+  fastapi_glim:
+    build:
+      context: ./back/fastapi/glim
+      dockerfile: Dockerfile_glim
+    container_name: fastapi-glim-app
+    ports:
+      - "8000:8000"
+    environment:
+      OPENAI_API_KEY: ${OPENAI_API_KEY}
+    networks:
+      - ippo_project
+  
+  fastapi_tuktak:
+    build:
+      context: ./back/fastapi/tuktak
+      dockerfile: Dockerfile_tuktak
+    container_name: fastapi-tuktak-app
+    ports:
+      - "8002:8002"
+    environment:
+      OPENAI_API_KEY: ${OPENAI_API_KEY}
+    networks:
+      - ippo_project
+
+  ippo-frontend:
+    build:
+      context: ./front
+      dockerfile: Dockerfile_react
+    container_name: ippo-frontend-app
+    volumes:
+      - "~/ippo/front:/usr/share/nginx/html"
+    ports:
+      - "80:80"
+    depends_on:
+      - ippo-backend
+    networks:
+      - ippo_project
+
+  ippo-backend:
+    build:
+      context: ./back/ippo2
+      dockerfile: Dockerfile_springboot
+    container_name: ippo-backend-app
+    ports:
+      - "8080:8080"
+    depends_on:
+      - ippo-db
+    environment:
+      GENERATE_SOURCEMAP: ${GENERATE_SOURCEMAP}
+      REACT_APP_KAKAO_API_RESTAPI_KEY: ${REACT_APP_KAKAO_API_RESTAPI_KEY}
+      AWS_ACCESS_KEY: ${AWS_ACCESS_KEY}
+      AWS_SECRET_KEY: ${AWS_SECRET_KEY}
+      S3_BUCKET: ${S3_BUCKET}
+      DB_USERNAME: ${DB_USERNAME}
+      DB_PASSWORD: ${DB_PASSWORD}
+    networks:
+      - ippo_project
+
+  redis:
+    image: redis:latest
+    container_name: ippo-redis
+    ports:
+      - "6379:6379"
+    networks:
+      - ippo_project
+
+volumes:
+  db-data:
+
+networks:
+  ippo_project:
+    name: ippo_project

@@ -1,0 +1,166 @@
+.pages {
+  width: 100%;
+  height: 100%;
+
+}
+
+.page {
+  width: 100%;
+  height: 100%;
+  user-select: none;
+  touch-action: none;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.page-half {
+  position: relative;
+  flex: 1 1;
+  padding: 20px;
+  height: 100%;
+  overflow-y: auto;
+
+  &.page-image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+
+    .page-image {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+    }
+  }
+
+  &.page-text-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center; // 텍스트를 왼쪽 정렬
+    color: black;
+    background-color: white;
+  }
+}
+
+.button-back, .button-next {
+  position: absolute;
+  bottom: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+
+  img {
+    width: 30px; // 화살표의 너비 설정
+    height: auto; // 높이를 자동으로 조정하여 비율 유지
+  }
+}
+
+.button-back {
+  right: 10%; // 우하단 위치
+}
+
+.button-next {
+  left: 10%; // 좌하단 위치
+}
+
+.user-message-title {
+  font-size: 4rem; /* 크기를 조정하여 제목처럼 보이게 함 */
+  font-weight: bold;
+  width: auto;
+  margin-bottom: 50px;
+}
+
+.glim-chapter-title {
+  display: flex;
+  color: blue; /* 챕터 제목에 대한 스타일 */
+  font-size: 2.8rem;
+  font-weight: bold;
+  justify-content: center;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.quoted-text {
+  animation: fadeIn 2s;
+  padding: 10px; /* 배경 크기 증가를 위한 패딩 */
+  border-radius: 8px; /* 둥근 모서리 */
+  letter-spacing: normal; /* 또는 원하는 자간 값 */
+}
+
+.text-part {
+  margin-bottom: 30px; /* 아래에 마진 추가 */
+}
+
+@keyframes textPopUp {
+  0% { opacity: 0; transform: translateY(100%); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+.quoted-text:hover span {
+  display: inline-block; /* span을 inline-block으로 설정해야 transform 적용 가능 */
+  opacity: 0; /* 초기 상태는 보이지 않게 */
+  animation: textPopUp 0.5s ease forwards; /* 순차적으로 나타나는 효과 */
+  animation-delay: calc(0.1s * var(--i)); /* 각 글자마다 약간의 지연을 줌 */
+}
+
+.question-container {
+  box-shadow: 0px 40px 8px rgba(0, 0, 0, 0.5); /* Shadow for depth */
+  opacity: 0.1;
+  transition: opacity 0.3s ease;
+  position: absolute;
+  border-radius: 20px;
+  padding: 20px;
+  color: black;
+  bottom: 5px;
+  left: 50%;
+  transform: translateX(-50%);
+  max-width: 800px; /* Example fixed max-width */
+  width: auto; /* Width adjusts to content with a maximum of max-width */
+  text-align: left; /* Center-aligns the text */
+  box-sizing: border-box; /* Includes padding and border in the width calculation */
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.question-container:hover {
+  opacity: 1;
+}
+
+.question {
+  margin-bottom: 20px;
+  word-break:keep-all
+}
+
+.child-response {
+  margin-top: 10px;
+  margin-bottom: 20px;
+  font-style: italic;
+  color: #333; /* 색상 및 기타 스타일은 필요에 따라 조정 */
+}
+
+.finish-btn {
+  position: absolute;
+  font-size: 20rem;
+  right: 10px;
+  bottom: 10px;
+  padding: 10px 20px;
+  margin-top: 20px;
+  background-color: #b2f1b5;
+  color: black;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.finish-btn:hover {
+  background-color: #77e27a; /* 녹색 배경 */
+}

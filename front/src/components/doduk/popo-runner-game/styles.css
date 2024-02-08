@@ -1,0 +1,103 @@
+@font-face {
+  font-family: "HakgyoansimGgooreogiR";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2307-2@1.0/HakgyoansimGgooreogiR.woff2")
+    format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  user-select: none;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  /* background-color: #012333; */
+  /* background-image: url(imgs/background.png); */
+}
+
+.world {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  background-image: url(imgs/background.png);
+  border-radius: 15px;
+  background-size: cover;
+}
+
+.score {
+  font-family: "HakgyoansimGgooreogiR";
+  position: absolute;
+  font-size: 8vmin;
+  right: 1vmin;
+  top: 20vmin;
+  color: #fff;
+}
+
+.start-screen {
+  font-family: "HakgyoansimGgooreogiR";
+  position: absolute;
+  font-size: 5vmin;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  text-align: center;
+}
+
+.hide {
+  display: none;
+}
+
+.ground {
+  --left: 0;
+  position: absolute;
+  width: 300%;
+  bottom: 0;
+  left: calc(var(--left) * 1%);
+}
+
+.popo {
+  --bottom: 0;
+  position: absolute;
+  left: 1%;
+  height: 30%;
+  bottom: calc(var(--bottom) * 1%);
+}
+
+.star {
+  position: absolute;
+  left: calc(var(--left) * 1%);
+  height: 18%;
+  bottom: 15px;
+}
+
+.progress-container {
+  margin-bottom: 1%;
+  width: 100%; /* 전체 너비 */
+  background-color: #b5c9e2; /* 배경 색상 */
+  border-radius: 4px; /* 모서리 둥글게 */
+  overflow: hidden; /* 내용이 넘칠 경우 숨김 처리 */
+}
+
+.progress-bar {
+  height: 20px; /* 높이 */
+  background-color: #0046a1; /* 진행 바 색상 */
+  width: 0%; /* 초기 너비 */
+  transition: width 0.5s ease-in-out; /* 너비 변경 시 애니메이션 효과 */
+}
+
+/* ProgressStep.css */
+.progress-step-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}

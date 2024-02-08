@@ -1,0 +1,50 @@
+# 개발 때문에 사용하는 입시 코드
+spring:
+  profiles:
+    active: ${ACTIVE} # 활성 프로파일 동적 설정
+
+  h2:
+    console:
+      enabled: true # 개발용 H2 콘솔 활성화
+  main:
+    banner-mode: off # 배너 모드 비활성화
+
+  jpa:
+    properties:
+      hibernate:
+        jdbc:
+          time_zone: Asia/Seoul # 시간대 설정
+        format_sql: true
+        dialect: org.hibernate.dialect.PostgreSQLDialect # PostgreSQL Dialect 사용
+    show-sql: true # SQL 로그 표시
+
+  servlet:
+    multipart:
+      max-file-size: 10MB
+      max-request-size: 10MB
+
+logging:
+  level:
+    ROOT: INFO
+    org:
+      springframework:
+        web: DEBUG
+        transaction: DEBUG
+      hibernate:
+        SQL: DEBUG
+        tool.hbm2ddl: DEBUG
+        type:
+          descriptor:
+            sql: TRACE
+
+cloud:
+  aws:
+    credentials:
+      accessKey: ${AWS_ACCESS_KEY} # 환경 변수로 AWS 접근 키 관리
+      secretKey: ${AWS_SECRET_KEY} # 환경 변수로 AWS 시크릿 키 관리
+    s3:
+      bucket: ${S3_BUCKET} # 환경 변수로 S3 버킷 설정
+    region:
+      static: ap-northeast-2
+    stack:
+      auto: false

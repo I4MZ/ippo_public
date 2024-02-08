@@ -1,0 +1,12 @@
+@font-face {
+    font-family: 'HakgyoansimGgooreogiR';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2307-2@1.0/HakgyoansimGgooreogiR.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.doduk_story_word{
+    font-family: 'HakgyoansimGgooreogiR';
+    line-height: 70px;
+    font-size: 45px;
+}

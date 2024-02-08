@@ -1,0 +1,67 @@
+.chat-container {
+  width: calc(100% - 20px); /* Subtract the left and right padding */
+  height: calc(100% - 20px); /* Adjust for top and bottom padding if necessary */
+  background-color: white;
+  margin: 0; /* Remove margin to fit within the parent */
+  padding: 0; /* Remove padding to fit within the parent */
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
+  border-radius: 20px; /* This should be slightly less than the parent's border-radius to maintain the rounded effect */
+  overflow-y: auto; /* Allows scrolling for overflow content */
+}
+
+.messages {
+  height: 100%;
+  overflow-y: auto;
+}
+
+.message {
+  display: flex;
+  margin: 2%;
+  flex-direction: column;
+}
+
+.message.user {
+  align-items: flex-end;
+  margin-bottom: 25px;
+}
+
+.message.bot{
+  align-items: flex-start;
+  margin-bottom: 25px;
+}
+
+.glim-chat-bubble {
+  max-width: 80%; /* 메시지 버블의 최대 너비를 부모의 70%로 설정 */
+  width: fit-content; /* This will make the bubble only as wide as its content */
+  white-space: pre-wrap;
+  padding: 10px 15px;
+  border-radius: 20px;
+}
+
+.glim-chat-bubble.user {
+  margin-right: 10px;
+}
+
+.glim-chat-bubble.bot {
+  margin-left: 10px;
+}
+
+.profile-image{
+  margin-bottom: 10px;
+}
+
+.glim-image{
+  max-width: 100%;
+  height: auto;
+}
+
+.message.user .glim-chat-bubble {
+  background: linear-gradient(135deg, #a9cbf8, #007bff);
+  color: black; /* Ensuring text is visible on the gradient */
+}
+
+.message.bot .glim-chat-bubble {
+  background: linear-gradient(135deg, #fc8488, #f8d3c8);
+  color: black; /* Change if a different text color is desired */
+}
+
