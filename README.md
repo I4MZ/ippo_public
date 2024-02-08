@@ -20,6 +20,7 @@
 
 ## 공통기능
 
+
 공동 작업 핵심 기술 소개
 ![공통 핵심 기술 locofy](image.png)
 
@@ -33,7 +34,27 @@
 > - 모델이 제공된 정보와 동화 내용을 분석하여 새로운 지식을 생성
 > - 심리 유형 분석 기준을 기반하여 만들어진 동화 데이터를 기반으로 심리 분석 보고서 작성
 
+
+![Imgur](https://i.imgur.com/xRpNrHp.png)
+
 ## 그림동화
+그림동화 서비스 소개
+![Imgur](https://i.imgur.com/0geuLf6.png)
+> 멀티모달 인터페이스(음성, 텍스트, 그림)을 활용해서 나만의 동화를 창작해볼 수 있습니다.
+
+![Imgur](https://i.imgur.com/yqploSb.png)
+> 원하는 동화가 생성되었다면 실제 동화책을 볼 수 있어요.
+
+![Imgur](https://i.imgur.com/JsYA9Ok.png)
+> 동화 내용 기반 심리 분석을 위한 질문지가 생성이 됩니다. 질문에 답을 하면 애착유형 분석하게 됩니다. 마이페이지의 분석표에서 확인할 수 있습니다.
+
+핵심기술
+![Imgur](https://i.imgur.com/1lYe5Km.png)
+> 웹소켓 기반 비동기 스트리밍으로 동화 내용을 실시간을 확인할 수 있습니다. 이를 통해서 사용자의 대기 시간을 줄여 흥미도를 높일 수 있습니다.
+
+![Imgur](https://i.imgur.com/lkfP3Uk.png)
+> OpenAI STT 모델, Whisper를 활용하여 음성 인터페이스를 활용하였습니다. 아이들이 언어를 통해서 자신만의 동화를 창작할 수 있도록 사용자 편의성을 개선하였습니다.
+
 
 ## 교훈동화
 
@@ -53,6 +74,7 @@
 
 | 이름 | 직책 | 담당 |
 | ---- | ---- | ---- |
+
 
 ### 개발 환경 및 프로젝트 기술 스택
 
@@ -75,14 +97,19 @@
 📡 DevOps
 |기술|버전|
 |------|---|
-|nginx|공백|
-|Docker|공백|
+|nginx|stable|
+|Docker|lastest|
+
 
 🪅 AI Model
 |기술|버전|
 |------|---|
-|공백|공백|
-|공백|공백|
+|Langchain|0.1.0|
+|openai|1.6.1|
+|google-api-core|2.15.0|
+|gpt4|gpt-4-1106-preview|
+|dall-e|dall-e-3|
+|whisper|whisper-1|
 
 ### API 명세서
 
@@ -111,5 +138,8 @@
   - 프로젝트 회의에 적극적으로 임하기</br>
   - 회의 진행 시 자신의 생각을 잘 정리해서 말하기</br>
 </details>
+
+### WBS
+![Imgur](https://i.imgur.com/vkjr38d.png)
 
 ### 개발 컨벤션
