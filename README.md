@@ -35,8 +35,6 @@
 > - 심리 유형 분석 기준을 기반하여 만들어진 동화 데이터를 기반으로 심리 분석 보고서 작성
 
 
-![Imgur](https://i.imgur.com/xRpNrHp.png)
-
 ## 그림동화
 그림동화 서비스 소개
 ![Imgur](https://i.imgur.com/0geuLf6.png)
